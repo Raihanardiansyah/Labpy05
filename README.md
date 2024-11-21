@@ -95,6 +95,8 @@ Setelah data berhasil dimasukkan ke dalam data_nilai, program mencetak pesan kon
 
 ![Gambar3](https://github.com/Raihanardiansyah/Labpy05/blob/main/ss/ss3.png?raw=true)
 
+### Berikut penjelasan dari program di atas
+
 ### Penjelasan Fungsi
 
 ### 1. Memanggil Fungsi lihat_data()
@@ -148,3 +150,126 @@ Nilai ini disimpan di dalam atribut Akhir.
 Setelah data berhasil diubah, program mencetak pesan bahwa perubahan berhasil dilakukan.
 
 ![Gambar4](https://github.com/Raihanardiansyah/Labpy05/blob/main/ss/ss4.png?raw=true)
+
+### berikut penjelasan dari program di atas
+
+Kode yang ditampilkan adalah fungsi Python bernama hapus_data(). Berikut adalah penjelasannya:
+
+### Fungsi hapus_data():
+
+Digunakan untuk menghapus data dari list bernama data_nilai.
+Proses yang dilakukan dalam fungsi ini:
+
+*Baris 44: Fungsi lihat_data() dipanggil untuk menampilkan semua data dalam list data_nilai. Hal ini membantu pengguna melihat data yang tersedia sebelum memutuskan data mana yang akan dihapus.
+
+*Baris 45: Program meminta pengguna memasukkan nomor indeks data yang ingin dihapus. Indeks ini dimasukkan melalui fungsi input(), kemudian dikurangi 1 agar sesuai dengan indeks berbasis 0 dalam Python.
+
+*Baris 46: Program memeriksa apakah indeks yang dimasukkan valid, yaitu apakah nilainya tidak negatif dan tidak lebih besar atau sama dengan panjang list data_nilai.
+
+*Jika tidak valid, Baris 47 akan menampilkan pesan "Data tidak ditemukan."
+
+*Baris 49: Jika indeks valid, item dalam list data_nilai pada indeks tersebut dihapus menggunakan perintah del.
+
+*Baris 50: Setelah data berhasil dihapus, program mencetak pesan "Data berhasil dihapus!"
+
+### Fungsi Pendukung
+
+lihat_data(): Fungsi ini (yang tidak terlihat di kode) bertugas menampilkan isi list data_nilai beserta indeksnya. Biasanya digunakan agar pengguna dapat mengetahui data mana yang akan dihapus.
+
+![Gambar5](https://github.com/Raihanardiansyah/Labpy05/blob/main/ss/ss5.png?raw=true)
+
+### Penjelasan Baris per Baris
+
+### Baris 52:
+
+keyword = input("Masukkan nama yang dicari: ").lower()
+Program meminta pengguna untuk memasukkan nama yang akan dicari, lalu mengonversinya menjadi huruf kecil (menggunakan .lower()) untuk memudahkan pencarian tanpa memperhatikan huruf besar atau kecil.
+
+### Baris 53:
+
+hasil_cari = [data for data in data_nilai if keyword in data['Nama'].lower()]
+
+Ini adalah list comprehension untuk mencari data dalam data_nilai.
+
+Setiap elemen data dalam data_nilai diperiksa apakah keyword ada di dalam data['Nama'].lower().
+
+Jika cocok, data tersebut akan dimasukkan ke dalam list hasil_cari.
+
+### Baris 54-55:
+
+if len(hasil_cari) == 0:
+
+Mengecek apakah list hasil_cari kosong (artinya tidak ada data yang cocok dengan keyword).
+
+Jika kosong, program mencetak "Data tidak ditemukan."
+
+### Baris 57-65:
+
+Else:
+
+Jika ditemukan data yang cocok, program menampilkan hasil pencarian dalam format tabel.
+
+Header tabel dicetak di Baris 59-61 dengan format berikut:
+
+objectivec
+
+Salin kode
+
+| NO | NIM      | NAMA      | TUGAS | UTS | UAS | AKHIR |
+
+### Baris 63-64:
+
+Menggunakan enumerate(hasil_cari, start=1) untuk menghasilkan nomor urut (NO) dimulai dari 1.
+
+Setiap elemen dalam hasil_cari dicetak dalam format yang rapi menggunakan string format:
+
+i adalah nomor urut.
+
+data['NIM'], data['Nama'], data['Tugas'], data['UTS'], data['UAS'], dan data['Akhir'] adalah nilai yang akan ditampilkan.
+
+Format angka seperti 5.2f digunakan untuk membatasi angka desimal pada nilai akhir hingga 2 digit.
+
+![Gambar6](https://github.com/Raihanardiansyah/Labpy05/blob/main/ss/ss6.png?raw=true)
+
+### Baris 67: while True:
+
+Program berjalan dalam loop tak berujung sampai pengguna memilih keluar (menu == 'k').
+
+### Baris 68-71: Tampilan Menu
+
+Program mencetak daftar menu:
+
+css
+Program Input Nilai
+==================
+[L]ihat, [T]ambah, [U]bah, [H]apus, [C]ari, [K]eluar
+
+Pengguna diminta untuk memilih menu melalui fungsi input() pada Baris 71, dan input pengguna dikonversi ke huruf kecil menggunakan .lower() agar tidak peka terhadap huruf besar/kecil.
+
+### Logika Pemilihan Menu (Baris 73-87):
+
+### Baris 73-74: if menu == 'l':
+
+Memanggil fungsi lihat_data() untuk menampilkan semua data.
+
+### Baris 75-76: elif menu == 't':
+
+Memanggil fungsi tambah_data() untuk menambahkan data baru ke dalam list.
+
+### Baris 77-78: elif menu == 'u':
+
+Memanggil fungsi ubah_data() untuk mengubah data yang sudah ada.
+
+### Baris 79-80: elif menu == 'h':
+
+Memanggil fungsi hapus_data() untuk menghapus data berdasarkan indeks tertentu.
+
+### Baris 81-82: elif menu == 'c':
+
+Memanggil fungsi cari_data() untuk mencari data berdasarkan nama tertentu.
+
+### Baris 83-85: elif menu == 'k':
+Jika pengguna memilih menu K (keluar), program mencetak "Keluar dari program." dan menggunakan break untuk menghentikan loop.
+
+### Baris 86-87: Else
+Jika input menu tidak valid, program mencetak pesan "Menu tidak valid."
