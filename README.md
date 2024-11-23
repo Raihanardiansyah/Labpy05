@@ -273,3 +273,97 @@ Jika pengguna memilih menu K (keluar), program mencetak "Keluar dari program." d
 
 ### Baris 86-87: Else
 Jika input menu tidak valid, program mencetak pesan "Menu tidak valid."
+
+![GambarRun](https://github.com/Raihanardiansyah/Labpy05/blob/main/ss/run.png?raw=true)
+
+Inilah hasil apabila program tersebut di Run, terdapt beberapa pilihan menu yang bisa kalian pilih.
+
+![GambahrHasil](https://github.com/Raihanardiansyah/Labpy05/blob/main/ss/hasil.png?raw=true)
+
+seperti inilah apabila kalian telah menginput data data kalian.
+
+![GambarHail2](https://github.com/Raihanardiansyah/Labpy05/blob/main/ss/hasil2.png?raw=true)
+
+Dan inilah apabila kalian memilih menu "Lihat" pada program tersebut akan memunculkan data yang telah kalian masukan tadi.
+
+### Berikut flowchart dari program tersebut
+
+![GambarFlowchart](https://github.com/Raihanardiansyah/Labpy05/blob/main/ss/flowchart.png?raw=true)
+
+### Berikut penjelasan dari flowchart tersebut
+
+### Deskripsi Umum:
+
+### 1. Mulai (Start): Proses dimulai dari sini.
+
+### 2. Tampilkan Menu: Sistem akan menampilkan daftar menu dengan opsi:
+
+[L]ihat: Melihat daftar data.
+
+[T]ambah: Menambahkan data baru.
+
+[U]bah: Mengubah data yang ada.
+
+[H]apus: Menghapus data.
+
+[C]ari: Mencari data.
+
+[K]eluar: Keluar dari sistem.
+
+### 3. Input Pilihan Menu (Write(Code Menu)): Pengguna memasukkan kode menu untuk menentukan aksi yang akan dilakukan.
+
+### Penjelasan Alur untuk Tiap Menu:
+
+### 1. [L] Lihat:
+
+Pengguna memilih opsi L.
+
+Sistem akan menampilkan daftar data yang tersedia.
+
+### 2. [T] Tambah:
+
+Pengguna memilih opsi T.
+
+Sistem menampilkan daftar data yang ada (jika ada).
+
+Pengguna diminta untuk memasukkan nomor dan data baru untuk ditambahkan.
+
+### 3. U] Ubah:
+
+Pengguna memilih opsi U.
+
+Sistem menampilkan daftar data yang ada.
+
+Jika data tidak ditemukan, sistem memberi tahu pengguna bahwa data tidak ada.
+
+Jika data ditemukan, pengguna diminta untuk memasukkan nomor data yang ingin diubah, lalu memasukkan data baru.
+
+### 4. [H] Hapus:
+
+Pengguna memilih opsi H.
+
+Sistem menampilkan daftar data.
+
+Pengguna diminta untuk memasukkan nomor data yang akan dihapus.
+
+### 5. [C] Cari:
+
+Pengguna memilih opsi C.
+
+Sistem meminta pengguna untuk memasukkan nama yang ingin dicari.
+
+Jika data ditemukan, sistem menampilkan daftar data tersebut.
+
+### 6. [K] Keluar:
+
+Pengguna memilih opsi K.
+
+Proses berakhir dan sistem keluar.
+
+### Catatan Penting:
+
+* Ada proses pengulangan di setiap akhir alur, yang berarti setelah pengguna menyelesaikan suatu aksi, sistem akan kembali ke menu utama untuk menerima perintah selanjutnya.
+
+* Jika input pengguna tidak sesuai dengan pilihan menu, sistem akan meminta input ulang.
+
+Flowchart ini merepresentasikan alur kerja program berbasis menu dengan kontrol penuh terhadap operasi data, seperti CRUD (Create, Read, Update, Delete).
